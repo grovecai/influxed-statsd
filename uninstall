@@ -1,0 +1,12 @@
+#! /bin/bash
+# usage: sudo ./uninstall
+
+service=influxed-statsd
+dest_path=/opt/$service
+
+cd /etc/init.d
+chkconfig $service off
+chkconfig --del $service
+rm -f $service
+
+rm -rf $dest_path
