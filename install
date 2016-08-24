@@ -5,9 +5,11 @@ service=influxed-statsd
 dest_path=/opt/$service
 rm -rf $dest_path
 cp -r `pwd` $dest_path
-cp init.d/$service /etc/init.d
+echo "[INFO] program files copied"
 
+cp init.d/$service /etc/init.d
 cd /etc/init.d
 chmod +x $service
 chkconfig --add $service
 chkconfig $service on
+echo "[INFO] service installed"

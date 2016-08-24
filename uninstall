@@ -8,5 +8,7 @@ cd /etc/init.d
 chkconfig $service off
 chkconfig --del $service
 rm -f $service
+echo "[INFO] service uninstalled"
 
-rm -rf $dest_path
+rm -rf $dest_pathi
+echo "[INFO] program files remove"
