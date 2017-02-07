@@ -11,7 +11,8 @@
 prog_name="influxed-statsd"
 prog_path="/opt/${prog_name}/stats.js"
 config_path="/opt/${prog_name}/config.js"
-log_path="/tmp/${prog_name}.log"
+#log_path="/tmp/${prog_name}.log"
+log_path="/dev/null"
 pidfile="/var/run/${prog_name}.pid"
 lock_path=/var/lock/subsys/$prog_name
 
